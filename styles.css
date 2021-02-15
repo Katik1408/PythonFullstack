@@ -1,0 +1,34 @@
+* {
+  margin: 20px;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  border: 5px solid red;
+  background-color: grey;
+  padding: 15px;
+  margin: 10px;
+}
+/* body {
+  background-image: url(nature.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: red;
+  background-blend-mode: lighten;
+} */
+.circle {
+  width: 300px;
+  height: 300px;
+  border: 5px solid red;
+  background-color: grey;
+  padding: 15px;
+  margin: 10px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+#myid {
+  background-color: aqua;
+}
+/* .triangle{
+
+      } */

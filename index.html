@@ -2,21 +2,64 @@
 <html>
   <head>
     <title>My First WebPage</title>
+    <style>
+      h2 {
+        color: yellow;
+      }
+      ul {
+        display: inline;
+      }
+      .coloring {
+        color: darkcyan;
+      }
+      .para1 {
+        color: #000000;
+        font-size: 30px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .para2 {
+        color: darkgoldenrod;
+        font-size: 30px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      body {
+        background-image: url("nature.jpg");
+        background-repeat: no-repeat;
+      }
+      .cls {
+        clip-path: polygon();
+      }
+    
+      
+      /* body{
+        background-color: grey;
+      } */
+    </style>
   </head>
   <body>
-    <p>This is some important paragraphs</p>
+    <!-- style="
+    color: blue;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+  " -->
+    <p class="para1">This is some important paragraphs</p>
 
-    <h1>Heading 1</h1>
+    <h1 style="color: red; margin: 100px">Heading 1</h1>
 
     <h2>Heading 2</h2>
 
-    <h3>Heading 3</h3>
+    <h3 class="coloring">Heading 3</h3>
     <h4>Heading 4</h4>
+
+    <p class="para2">This is another Para</p>
 
     <h5>Heading 5</h5>
 
     <h6>Heading 6</h6>
-
     <table border="1">
       <caption>
         My Table
@@ -32,6 +75,7 @@
       </tr>
     </table>
 
+    
     <!--     
         <img src="nature.jpg" width="50%" alt="Nature image" />
 
@@ -62,18 +106,12 @@
       <p><emp>Hello</emp> from span</p>
     </span>
 
-    <a href="form.html">
-      Click here
-    </a>
+    <a href="form.html"> Click here </a>
     <i class="fab fa-amazon"></i>
 
     <br />
     <br />
 
-    <a href="https://www.google.com">
-      Go to  &nbsp; Google
-    </a>
-
-    
+    <a href="https://www.google.com"> Go to &nbsp; Google </a>
   </body>
 </html>

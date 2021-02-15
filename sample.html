@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CLASS SELECTOR</title>
+    <style>
+      .colorchange {
+        color: rgb(42, 14, 141);
+        font-style: italic;
+      }
+      .againchange {
+        color: rgb(151, 73, 8);
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+
+      .background {
+        /* The image used */
+        background-image: url("unnamed.jpg");
+
+        /* Full height */
+        height: 100%;
+        margin: 20px;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <p class="colorchange">COLOR HAS CHANGED AND IT IS ITALIC</p>
+
+      <br />
+
+      <h1 class="againchange">THIS HAS A DIFFERENT COLOR AND FONT FAMILY</h1>
+    </div>
+  </body>
+</html>
