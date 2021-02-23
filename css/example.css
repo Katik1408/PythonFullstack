@@ -1,0 +1,38 @@
+p{
+    color:green;
+    font-size: 50px;
+    font-style: italic;
+}
+.myclass{
+    color: pink;
+}
+
+#myid{
+    color:brown;
+}
+.space{
+    margin-top: 150px;
+    
+}
+ 
+ *{
+    margin:100px;
+}
+
+.box{
+    margin:20px;
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid red;
+    background-color: green;
+}
+
+
+a {
+    color: red;
+  }
+  a:hover {
+    color: green;
+    border: 2px solid red;
+  }
+  
