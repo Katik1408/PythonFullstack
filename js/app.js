@@ -245,20 +245,77 @@
 //   console.log(e);
 // });
 
-// function showData() {
-//   setTimeout(() => {
-//     console.log(20);
-//   }, 2000);
+function showData() {
+  setTimeout(() => {
+    console.log(20);
+  }, 2000);
+}
+
+function showData2() {
+  console.log(21);
+}
+showData();
+showData2();
+
+console.log("Hello for Node ");
+
+// function show() {
+//   let txtuser = document.getElementById("txt");
+//   txtuser.value = "Some value";
+//   console.log(txtuser);
 // }
 
-// function showData2() {
-//   console.log(21);
-// }
-// showData();
-// showData2();
+// Regular Expression
 
-function show() {
-  let txtuser = document.getElementById("txt");
-  txtuser.value = "Some value"
-  console.log(txtuser);
+function validateForm() {
+  let tuser = document.getElementById("uname");
+  let puser = document.getElementById("erroruser");
+  let emid = document.getElementById("eid");
+  let pemid = document.getElementById("erroremail");
+  let pwd = document.getElementById("pwd");
+  let epwd = document.getElementById("errorpwd");
+  let cpwd = document.getElementById("cpwd");
+  let ecpwd = document.getElementById("errorcpwd");
+
+  //console.log(pwd.value.length);
+
+  if (tuser.value == "") {
+    tuser.style.border = "2px solid red";
+    puser.innerHTML = "Username should not be blank";
+    puser.style.color = "red";
+    return false;
+  } else if (emid.value == "") {
+    emid.style.border = "2px solid red";
+    pemid.innerHTML = "Email id cannot be blank";
+    pemid.style.color = "red";
+    return false;
+  } else if (pwd.value == "") {
+    pwd.style.border = "2px solid red";
+    epwd.innerHTML = "Password cannot be blank";
+    epwd.style.color = "red";
+    return false;
+  } else if (pwd.value.length < 6 || pwd.value.length > 20) {
+    pwd.style.border = "2px solid red";
+    epwd.innerHTML = "Password should be in between 6 and 20";
+    epwd.style.color = "red";
+    return false;
+  } else if (cpwd.value == "") {
+    cpwd.style.border = "2px solid red";
+    ecpwd.innerHTML = "Password cannot be blank";
+    ecpwd.style.color = "red";
+    return false;
+  }
+  else if(pwd.value !== cpwd.value){
+    cpwd.style.border = "2px solid red";
+    ecpwd.innerHTML = "Password do not match";
+    ecpwd.style.color = "red";
+    return false;
+  }
+}
+
+function removeStyles() {
+  let tuser = document.getElementById("uname");
+  let puser = document.getElementById("erroruser");
+  tuser.style.border = "";
+  puser.innerHTML = "";
 }
