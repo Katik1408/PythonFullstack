@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Another Page
+
+    <h1 id="uname"></h1>
+
+    <input type="button" onclick="logout()" value="Logout" />
+    <script>
+      let name = localStorage.getItem("user");
+      document.getElementById("uname").innerHTML = name;
+
+      function logout() {
+        localStorage.clear();
+        window.location.href = "register.html";
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
+

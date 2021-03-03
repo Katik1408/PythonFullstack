@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="google-signin-client_id"
+      content="287068684085-ammlkrg7n5o09o3776cn7hummpi99qor.apps.googleusercontent.com"
+    />
     <title>Document</title>
     <link
       rel="stylesheet"
@@ -60,14 +64,88 @@
             <a class="nav-link" href="#">Pricing</a>
           </li>
         </ul>
-        
       </div>
     </nav>
 
-    <h1>
-      Welcome User
-    </h1>
+    <h1 id="greet"></h1>
 
+    <div class="container">
+      <div class="card">
+        <table class="table">
+          <tr>
+            <th>Username</th>
+            >
+            <th>Email Id</th>
+          </tr>
+          <tr>
+            <td id="usr"></td>
+            <td id="eid"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="container">
+      <a class="btn btn-primary" href="another.html">Next Page</a>
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
-      </body>
+      <fb:login-button
+        scope="public_profile,email"
+        onlogin="checkLoginState();"
+      ></fb:login-button
+      >
+    </div>
+    <script>
+      let url = new URLSearchParams(window.location.search);
+
+      let username = url.get("uname");
+      let email = url.get("emailid");
+      console.log(username);
+
+      localStorage.setItem("user", username);
+      document.getElementById("greet").innerHTML = "Welcome " + username;
+      document.getElementById("usr").innerHTML = username;
+      document.getElementById("eid").innerHTML = email;
+
+      function onSignIn(googleUser) {
+        let profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log("Name: " + profile.getName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
+      }
+      window.fbAsyncInit = function () {
+        FB.init({
+          appId: "1025976767925598",
+          cookie: true,
+          xfbml: true,
+          version: "1.0.0",
+        });
+
+        FB.AppEvents.logPageView();
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+
+      FB.getLoginStatus(function (response) {
+        statusChangeCallback(response);
+      });
+
+      function checkLoginState() {
+        FB.getLoginStatus(function (response) {
+          statusChangeCallback(response);
+        });
+      }
+    </script>
+    <script src="https://apis.google.com/js/platform.js"></script>
+  </body>
 </html>

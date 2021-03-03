@@ -1,0 +1,9 @@
+.namefont{
+    font-family: 'love-font';
+    font-size: 120px;
+}
+
+@font-face{
+    font-family: 'love-font';
+    src: url(../assets/fonts/LoveMatch.ttf);
+}
